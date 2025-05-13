@@ -1,0 +1,11 @@
+[Unit]
+Description="Discord Bot"
+
+[Service]
+ExecStart=bash -c "poetry run python src/discord_bot/run.py"
+User=discord-bot
+Group=discord-bot
+WorkingDirectory=/var/lib/discord-bot
+
+[Install]
+WantedBy=multi-user.target
